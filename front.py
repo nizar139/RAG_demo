@@ -3,7 +3,7 @@ import streamlit as st
 from src.backend import SimpleRAG
 from src.config import LLM_PROVIDER, MODEL_REPO
 
-if 'rag' not in st.session_state:
+if "rag" not in st.session_state:
     st.session_state.rag = SimpleRAG(
         llm_provider=LLM_PROVIDER,
         model_repo=MODEL_REPO,
@@ -29,7 +29,7 @@ if prompt := st.chat_input("What is up?"):
         st.markdown(prompt)
     # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
-    
+
     answer = st.session_state.rag.answer_query(prompt)
     st.session_state.messages.append({"role": "assistant", "content": answer})
     st.write(answer)

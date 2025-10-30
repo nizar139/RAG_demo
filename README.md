@@ -43,7 +43,7 @@ There are several ideas to improve this RAG system :
 - Maintain a conversation history for a chatbot system.
 - Allow the LLM to use the retrieval multiple times (as a tool) for chain-of-thoughts answers.
 - Add a feedback loop for the user to evaluate the quality of the responses.
-- Allow the used to view and modify the retrieved context.
+- Allow the user to view and modify the retrieved context.
 - Make the code asynchronious.
 
 ## How to run the files
